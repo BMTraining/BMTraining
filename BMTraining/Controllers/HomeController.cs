@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BMTraining.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,16 @@ namespace BMTraining.Controllers
             ViewBag.Message = "Your application description page.";
 
             return View();
+        }
+
+        public ActionResult Services()
+        {
+            var model = new Services();
+            model.Id = 90;
+            model.Name = "Grand Vezir";
+            model.ServiceNames = new List<string>() { "Balo", "Sünnet", "Düğün" };
+
+            return View(model);
         }
 
         public ActionResult Contact()

@@ -1,0 +1,10 @@
+﻿@model BMTraining.Models.Services
+
+<h2>@Model.Name</h2>
+<ul>
+    @foreach (var service in Model.ServiceNames)
+    {
+        <li>@service</li>
+    }
+</ul>
+
